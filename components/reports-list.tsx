@@ -150,6 +150,7 @@ export function ReportsList() {
     toll_free_did: "",
     customer_number: "",
     call_type: "",
+    filename: "",
     // caller_sentiment: "",
   });
 
@@ -161,6 +162,7 @@ export function ReportsList() {
     toll_free_did: null,
     customer_number: null,
     call_type: "",
+    filename: "",
     // caller_sentiment: null,
   });
 
@@ -303,6 +305,7 @@ export function ReportsList() {
       toll_free_did: "",
       customer_number: "",
       call_type: "",
+      filename: "",
       // caller_sentiment: "",
     });
     setSearchQuery("");
@@ -734,7 +737,7 @@ export function ReportsList() {
                           handleColumnSort={handleColumnSort}
                         />
                       </TableHead>
-                      <TableHead className="font-semibold min-w-[150px]">
+                      {/* <TableHead className="font-semibold min-w-[150px]">
                         <ColumnHeader
                           column="call_type"
                           icon={<ArrowRightLeft className="h-4 w-4" />}
@@ -744,19 +747,19 @@ export function ReportsList() {
                           handleColumnFilterChange={handleColumnFilterChange}
                           handleColumnSort={handleColumnSort}
                         />
-                      </TableHead>
+                      </TableHead> */}
                       <TableHead className="font-semibold min-w-[180px]">
                         <ColumnHeader
-                          column="caller_name"
+                          column="filename"
                           icon={<UserRound className="h-4 w-4" />}
-                          label="Caller Name"
+                          label="File Name"
                           columnFilters={columnFilters}
                           columnSorts={columnSorts}
                           handleColumnFilterChange={handleColumnFilterChange}
                           handleColumnSort={handleColumnSort}
                         />
                       </TableHead>
-                      <TableHead className="font-semibold min-w-[150px]">
+                      {/* <TableHead className="font-semibold min-w-[150px]">
                         <ColumnHeader
                           column="toll_free_did"
                           icon={<Headset className="h-4 w-4" />}
@@ -777,7 +780,7 @@ export function ReportsList() {
                           handleColumnFilterChange={handleColumnFilterChange}
                           handleColumnSort={handleColumnSort}
                         />
-                      </TableHead>
+                      </TableHead> */}
                       <TableHead className="font-semibold min-w-[120px]">
                         <span>Status</span>
                       </TableHead>
@@ -858,7 +861,7 @@ export function ReportsList() {
                             <TableCell className="text-gray-600 dark:text-gray-300">
                               {report.call_date || "-"}
                             </TableCell>
-                            <TableCell className="text-gray-600 dark:text-gray-300">
+                            {/* <TableCell className="text-gray-600 dark:text-gray-300">
                               <div className="flex items-center gap-2">
                                 {report.call_type === "in" ? (
                                   <>
@@ -874,7 +877,7 @@ export function ReportsList() {
                                   report.call_type
                                 )}
                               </div>
-                            </TableCell>
+                            </TableCell> */}
                             {/* <TableCell>
                               <Button
                                 variant="ghost"
@@ -888,8 +891,8 @@ export function ReportsList() {
                               </Button>
                             </TableCell> */}
                             <TableCell>
-                              {report.caller_name &&
-                              report.caller_name !== "null" ? (
+                              {report.filename &&
+                              report.filename !== "null" ? (
                                 <Button
                                   variant="ghost"
                                   className="px-0 font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 text-[1.1rem]"
@@ -898,7 +901,7 @@ export function ReportsList() {
                                     router.push(`/reports/${report.id}`);
                                   }}
                                 >
-                                  {report.caller_name}
+                                  {report.filename}
                                 </Button>
                               ) : (
                                 <span>-</span>
@@ -907,12 +910,12 @@ export function ReportsList() {
                             {/* <TableCell className="text-gray-600 dark:text-gray-300">
                               {report.request_type?.charAt(0).toUpperCase() + report.request_type?.slice(1) || "-"}
                             </TableCell> */}
-                            <TableCell className="text-gray-600 dark:text-gray-300">
+                            {/* <TableCell className="text-gray-600 dark:text-gray-300">
                               {report.toll_free_did || "-"}
-                            </TableCell>
-                            <TableCell className="text-gray-600 dark:text-gray-300">
+                            </TableCell> */}
+                            {/* <TableCell className="text-gray-600 dark:text-gray-300">
                               {report.customer_number || "-"}
-                            </TableCell>
+                            </TableCell> */}
                             <TableCell>
                               {report.status === "processing" ? (
                                 <span className="px-2 py-1 rounded bg-yellow-100 text-yellow-800 text-xs">
