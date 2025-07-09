@@ -528,22 +528,22 @@ ${content}
                             {metadata.responder_name}
                           </p>
                         </div>
-                        <div>
+                        {/* <div>
                           <p className="text-xs text-muted-foreground mb-1">
                             Call Start Time
                           </p>
                           <p className="text-sm font-medium truncate">
                             {metadata.call_start_time}
                           </p>
-                        </div>
-                        <div>
+                        </div> */}
+                        {/* <div>
                           <p className="text-xs text-muted-foreground mb-1">
                             Call ID
                           </p>
                           <p className="text-sm font-medium truncate">
                             {metadata.call_id}
                           </p>
-                        </div>
+                        </div> */}
                         <div>
                           <div className=" text-xs mb-1">
                             <p className="text-muted-foreground">
@@ -564,7 +564,7 @@ ${content}
                     </div>
                   </div>
 
-                  <div className="bg-background rounded-lg border shadow-sm overflow-hidden">
+                  {/* <div className="bg-background rounded-lg border shadow-sm overflow-hidden">
                     <div className="bg-background border-b px-3 sm:px-4 py-2 sm:py-3">
                       <h3 className="font-medium text-sm">
                         Contact Information
@@ -590,7 +590,7 @@ ${content}
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* <div className="bg-background rounded-lg border shadow-sm overflow-hidden">
                     <div className="bg-background border-b px-3 sm:px-4 py-2 sm:py-3">

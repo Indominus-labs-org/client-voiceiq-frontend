@@ -86,7 +86,7 @@ export default function UploadPage() {
       });
 
       // Set up and send the request
-      xhr.open("POST", `${BASE_URL}/create_log`, true);
+      xhr.open("POST", `${BASE_URL}/upload`, true);
       xhr.send(formData);
 
       // Wait for the upload to complete

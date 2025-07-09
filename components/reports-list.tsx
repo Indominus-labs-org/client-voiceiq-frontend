@@ -901,7 +901,7 @@ export function ReportsList() {
                                     router.push(`/reports/${report.id}`);
                                   }}
                                 >
-                                  {report.filename}
+                                {report.filename.replace(/\.(mp3|wav)$/i, "")}
                                 </Button>
                               ) : (
                                 <span>-</span>
